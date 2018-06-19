@@ -42,9 +42,9 @@
                                     <a class="fontello-youtube-play" target="_blank" href="http://youtube.me/BimCoin"></a>
                                 </div>
 
-                                <p class="text--left">Donation starts in</p>
+                                <p class="text--left">Donation ends in</p>
 
-                                <div class='countdown js-countdown' data-date="2018-06-1"></div>
+                                <div class='countdown js-countdown' data-date="2018-11-30"></div>
                             </div>
                         </div>
                     </div>
@@ -212,24 +212,13 @@
                 <div class="documents documents--style-2">
                     <div class="__inner">
                         <h3>
-                            Donation Instructions
+                            Ethereum Market
                         </h3>
                         <div class="row">
                             <!-- start item -->
-                            <div class="col col--xs-12 col--sm-12">
-                                <h6>
-                                    Conversion Rate: 100,000BIM for $1 donation
-                                </h6>
-                                <p>
-                                    Send Donation to <br>
-                                    <strong>
-                                        0x9e7ce36dbd1a9a6c6e80d08e38077745855edd3a
-                                    </strong>
-                                </p>
-                                <small>
-                                    The Bimcoin will be sent to the adress used for the donation. Please do not send from an exchange, send from an ether address you have the private key to.
-                                </small>
-                                <small> <br> Read on how to make donations here <a href="{{route('how.to')}}">Here</a> </small>
+                            <div class="col col--xs-3"></div>
+                            <div class="col col--xs-6 col--sm-6">
+                               <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div class="coinmarketcap-currency-widget" data-currencyid="1027" data-base="NGN" data-secondary="USD" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="true"></div>
                             </div>
                             <!-- end item -->
                         </div>
@@ -306,7 +295,9 @@
                         80% ICO (freely given on donation) <br> 15% team <br> 5% Operation cost <br>
 
                         <p>
-                            <a class="custom-btn custom-btn--medium custom-btn--style-2" href="#">See White paper</a>
+                            <a class="custom-btn custom-btn--medium custom-btn--style-2" href="{{asset('bimCoin_whitePaper.pdf')}}/" target="_blank">See White paper</a>
+                            
+                            
                         </p>
                     </div>
 
@@ -315,6 +306,12 @@
                     <div class="col col--md-6 col--lg-offset-1">
                         <div style="width:100%">
                             <canvas id="canvas_00002" width="100%" height="90%"></canvas>
+                            
+                            <p>
+                                The above distribution strategy will allow us to innovate and maintain the platform to achieve maximum efficiency
+                                <br>
+                                100,000 BIM can be gotten by donating $1 to the project.
+                            </p>
 
                             <script type="text/javascript">
                                 (function() {
@@ -487,6 +484,8 @@
 
                                 <p>
                                     We are constantly taking note of the best option for the project and will release a more stable code in he last Quarter of the year
+                                    <br>
+                                    And we would have build and launch BimCoinXchange.cc where you can exchange Fiat Currencies To BimCoin and other Crypto Currencies and vise versa just like Remitano.com And BimCoin will be listed on some other external exchange also where you can trade BimCoin
                                 </p>
                             </div>
                             <!-- end item -->
@@ -500,6 +499,8 @@
 
                                 <p>
                                     We will continue to support Bimcoin and find better ways to iterate the core to be faster, more secured and safer.
+                                    <br>
+                                    And we would build and launch more additional exchanges to make more easier and convenient BimCoin conversion.
                                 </p>
                             </div>
                             <!-- end item -->
@@ -647,7 +648,7 @@
                                 </tr>
                             </table>
 
-                            <a class="custom-btn custom-btn--medium custom-btn--style-1" href="#donation">Donate now !</a>
+                            <a class="custom-btn custom-btn--medium custom-btn--style-1" href="{{route('donate')}}">Donate now !</a>
                         </div>
                     </div>
 

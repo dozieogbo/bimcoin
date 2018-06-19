@@ -113,6 +113,14 @@ class HomeController extends Controller
         ]);
     }
 
+    public function report(){
+        return view('refreport');
+    }
+
+    public function userReport(){
+        return view('userreport');
+    }
+
     public function logout(){
         Auth::logout();
         return redirect()->route('index');

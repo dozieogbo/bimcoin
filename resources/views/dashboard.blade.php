@@ -95,7 +95,7 @@
 
             </div>
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Purchased Bim coin</h5>
@@ -105,7 +105,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-sm-4">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Want Bim coin?</h5>
@@ -117,10 +117,51 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-sm-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">MyEther Wallet</h5>
+                            <p class="card-text">
+                                <span class=" text-success">Send out and send in Your BimCoin From MyEther Wallet </span>
+                                <br>
+                                <a class="custom-btn custom-btn--small custom-btn--style-3" target="_blank" href="https://www.myetherwallet.com">myetherwallet</a></li>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <br>
             <div class="row">
                 <div class="col-sm-4">
+                <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Referal details </h5>
+                            <p class="card-text">
+                            <ul>
+                                <li>
+                                    <strong class="text-black">
+                                        Number of Referals
+                                    </strong>
+                                    <span class=" text-black">
+                                25
+                            </span>
+                                </li>
+                                <li>
+                                    <strong class="text-black">
+                                        Referal Link
+                                    </strong>
+                                    <span class="text-small text-black">
+                                <a href="#">Bimcoin.cc/ref/dika</a> <br>
+                                <small>Get 1,000BIM for each refered person that donated</small>
+                            </span>
+                                </li>
+                                
+                            </ul>
+                            
+                            </p>
+                        </div>
+                    </div>
+                    <br>
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Personal details </h5>

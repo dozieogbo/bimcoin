@@ -23,3 +23,5 @@ Route::get('/terms', 'HomeController@terms')->name('terms');
 Route::get('/verify', 'HomeController@verify')->name('verify');
 Route::post('/profile', 'HomeController@profile')->name('profile');
 Route::post('/subscribe', 'HomeController@subscribe')->name('subscribe');
+Route::get('/report', 'HomeController@report')->name('report');
+Route::get('/report/{id}', 'HomeController@userReport')->name('user.report');

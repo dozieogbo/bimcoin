@@ -12,13 +12,23 @@
                             <h5 class="card-title ">Donation instructions</h5>
                             <p class="card-text">
 
-                            <h3>Conversion Rate: 100,000BIM for $1 donation</h3>
+                            <small>Rate: $1 to 100,000 BIM</small>
+
+                            <div class="col-md-12">
+                            <span class="form-control-md text-black">Expected BIMCOIN : 40,000,000</span>
+                             <input class="form-control col-md-3 text-center" placeholder="Amount in USD" style="margin:auto"/>
+                             <br>
+                             
+                            </div>
+
+                            
 
                             <p>
-                                Send Donation to
+                                Donation address:
                             </p>
-                            <h3>0x9e7ce36dbd1a9a6c6e80d08e38077745855edd3a</h3>
-                                <p>The Bimcoin will be sent to the address used for the donation. Please do not send from an exchange, send from an ether address you have the private key to.
+                            <h5>0x9e7ce36dbd1a9a6c6e80d08e38077745855edd3a</h5>
+                                <h6>Gas limit: 21,000 <br> Gas price: 100 Gwei </h6>
+                                    <p>The Bimcoin will be sent to the address used for the donation. Please do not send from an exchange, send from an ether address you have the private key to.
                                     Read on how to make donations here</p>
                         </div>
                     </div>
