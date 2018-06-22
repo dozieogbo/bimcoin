@@ -15,13 +15,11 @@
                             <small>Rate: $1 to 100,000 BIM</small>
 
                             <div class="col-md-12">
-                            <span class="form-control-md text-black">Expected BIMCOIN : 40,000,000</span>
-                             <input class="form-control col-md-3 text-center" placeholder="Amount in USD" style="margin:auto"/>
+                            <span class="form-control-md text-black">Expected BIMCOIN : <span id="expected_amount">0</span></span>
+                             <input class="form-control col-md-3 text-center" placeholder="Amount in USD" style="margin:auto" id="donate_amount" step="0.01"/>
                              <br>
                              
                             </div>
-
-                            
 
                             <p>
                                 Donation address:
@@ -37,4 +35,13 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts')
+    <script>
+        $('#donate_amount').on('input', function (e) {
+            var value = Number(e.target.value);
+            $('#expected_amount').text((value * 100000).toLocaleString())
+        })
+    </script>
 @endsection

@@ -18,7 +18,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth')->only(['dashboard', 'logout', 'donate']);
+        $this->middleware('auth')->only(['dashboard', 'logout', 'donate', 'report', 'userReport']);
     }
 
     /**
@@ -33,9 +33,13 @@ class HomeController extends Controller
 
     public function dashboard()
     {
-        $user = Auth::user()->toArray();
+        $user = Auth::user();
 
-        return view('dashboard')->with($user);
+        $referralCount = $user->referrals()->count();
+
+        $user->assignRefCodeIfAbsent();
+
+        return view('dashboard')->with($user->toArray())->with('ref_count', $referralCount);
     }
 
     public function subscribe(Request $request){
@@ -114,11 +118,27 @@ class HomeController extends Controller
     }
 
     public function report(){
-        return view('refreport');
+        if(!$this->isAdmin())
+            return redirect()->route('login');
+
+        $users = User::whereHas('referrals')->withCount('referrals')->paginate(30);
+
+        return view('refreport', compact('users'));
     }
 
-    public function userReport(){
-        return view('userreport');
+    public function userReport($id){
+        if(!$this->isAdmin())
+            return redirect()->route('login');
+
+        $user = User::find($id);
+
+        $referrals = $user->referrals()->paginate(30);;
+
+        return view('userreport', compact('referrals', 'user'));
+    }
+
+    private function isAdmin(){
+        return Auth::user()->role == 'admin';
     }
 
     public function logout(){

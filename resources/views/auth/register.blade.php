@@ -86,6 +86,10 @@
                                     <i class="textfield-ico"></i>
                                     <input class="textfield" type="text" placeholder="How did you know about BimCoin"  value="{{old('how_you_knew')}}" name="how_you_knew" required/>
                                 </div>
+                                <div class="input-wrp">
+                                    <i class="textfield-ico"></i>
+                                    <input class="textfield" type="text" name="ref"  placeholder="Enter Referral Code"  value="{{ $code or old('ref') }}"  {{isset($code) ? 'readonly' : ''}}/>
+                                </div>
 <br>
                                 <div class="input-wrp">
                                     <input class="" type="checkbox"  value="yes" name="terms" required/>

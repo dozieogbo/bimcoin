@@ -100,7 +100,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Purchased Bim coin</h5>
                             <p class="card-text">
-                            <h3>BIM <span id="balance"></span></h3>
+                            <h3>BIM <span id="balance">0.00</span></h3>
                             </p>
                         </div>
                     </div>
@@ -135,24 +135,24 @@
                 <div class="col-sm-4">
                 <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Referal details </h5>
+                            <h5 class="card-title">Referral details </h5>
                             <p class="card-text">
                             <ul>
                                 <li>
                                     <strong class="text-black">
-                                        Number of Referals
+                                        Number of Referrals
                                     </strong>
                                     <span class=" text-black">
-                                25
+                                {{$ref_count}}
                             </span>
                                 </li>
                                 <li>
                                     <strong class="text-black">
-                                        Referal Link
+                                        Referral Link
                                     </strong>
                                     <span class="text-small text-black">
-                                <a href="#">Bimcoin.cc/ref/dika</a> <br>
-                                <small>Get 1,000BIM for each refered person that donated</small>
+                                <a href="https://bimcoin.cc/ref/{{$ref_code}}">https://bimcoin.cc/ref/{{$ref_code}}</a> <br>
+                                <small>Get 1,000BIM for each referred person that donated</small>
                             </span>
                                 </li>
                                 
@@ -295,8 +295,10 @@
             .call({
                 from: walletAddress
             }, function (err, balance) {
-                if (err)
-                    console.log(err)
+                if (err) {
+                    console.log(err);
+                    $('#balance').text("0.00");
+                }
                 else
                     $('#balance').text(new BigNumber(balance).div(1e18).toFormat(2));
             });

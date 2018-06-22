@@ -16,6 +16,7 @@ Route::get('/logout', 'HomeController@logout')->name('logout');
 
 Auth::routes();
 
+Route::get('/ref/{code}', 'Auth\RegisterController@showRegistrationForm')->name('register.referral');
 Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
 Route::get('/how_to', 'HomeController@howTo')->name('how.to');
 Route::get('/donate', 'HomeController@donate')->name('donate');
