@@ -19,6 +19,16 @@
     <meta name="theme-color" content="#3F6EBF"/>
     <meta name="msapplication-navbutton-color" content="#3F6EBF"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="#3F6EBF"/>
+    <meta property="og:image" itemprop="image" content="{{asset('img/roundlogo.png')}}">
+    <meta property="og:image:url" itemprop="image" content="{{str_replace_first('https', 'http',  asset('img/roundlogo.png'))}}">
+    <meta property="og:image:secure_url" itemprop="image" content="{{asset('img/roundlogo.png')}}" />
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="256">
+    <meta property="og:image:height" content="256">
+    <meta property="og:title" content="Bimcoin | {{$title or 'Home'}}" />
+    <meta property="og:url" content="{{url()->current()}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Biggest Interwealth Movement Coin" />
 
     <link rel="apple-touch-icon" sizes="57x57" href="{{asset('favicon/apple-icon-57x57.png')}}">
     <link rel="apple-touch-icon" sizes="60x60" href="{{asset('favicon/apple-icon-60x60.png')}}">

@@ -1,3 +1,4 @@
+<?php $title = 'Terms' ?>
 @extends('layouts.app')
 
 @section('content')

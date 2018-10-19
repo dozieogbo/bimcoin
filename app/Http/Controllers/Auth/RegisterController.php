@@ -55,6 +55,11 @@ class RegisterController extends Controller
         return Validator::make($data, Helper::getUserValidationRules());
     }
 
+    public function showRegistrationForm($code = null)
+    {
+        return view('auth.register', compact('code'));
+    }
+
     /**
      * Create a new user instance after a valid registration.
      *
@@ -65,13 +70,22 @@ class RegisterController extends Controller
     {
         $data['password'] = Hash::make($data['password']);
 
+        $sponsor = null;
+
+        if (!empty($data['ref'])) {
+            $sponsor = User::where('ref_code', $data['ref'])->first();
+        }
+
         $user = new User($data);
+        $user['referrer_id'] = !is_null($sponsor) ? $sponsor->id : null;
+
         $token = new EmailToken([
             'token' => str_random(8),
             'expires_at' => Carbon::today()->addHour(24)
         ]);
 
-        DB::transaction(function () use ($user, $token){
+        DB::transaction(function () use ($user, $token, $sponsor){
+
             $user->save();
             $token->id = $user->id;
             $token->save();

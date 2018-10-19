@@ -22,7 +22,7 @@ class User extends Authenticatable
         'last_name', 'middle_name',
         'age', 'profession', 'phone',
         'religion', 'country', 'how_you_knew',
-        'address'
+        'address', 'referrer_id', 'ref_code', 'role'
     ];
 
     protected $casts = ['is_verified' => 'boolean'];
@@ -49,6 +49,14 @@ class User extends Authenticatable
         return $this->hasOne('App\EmailToken', 'id');
     }
 
+    public function referrer(){
+        return $this->belongsTo('App\User', 'referrer_id');
+    }
+
+    public function referrals(){
+        return $this->hasMany('App\User', 'referrer_id');
+    }
+
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new PasswordResetNotification($token, $this->first_name));
@@ -59,6 +67,7 @@ class User extends Authenticatable
     {
         self::creating(function ($user) {
             $user->id = Uuid::uuid4()->toString();
+            $user->ref_code = Helper::generateRefCode($user->name);
             return $user;
         });
     }
@@ -67,4 +76,11 @@ class User extends Authenticatable
     {
         $this->notify(new SignupNotification($this, $token));
     }
+
+    public function assignRefCodeIfAbsent(){
+    if(!$this->ref_code){
+        $this->ref_code = Helper::generateRefCode($this->name);
+        $this->save();
+    }
+}
 }

@@ -31,6 +31,7 @@ class Helper
             $rules['email'] = 'required|string|email|max:255|unique:users,email';
             $rules['address'] = 'required|string|unique:users,address';
             $rules['terms'] = 'accepted';
+            $rules['ref'] = 'sometimes|nullable|exists:users,ref_code';
             $rules['how_you_knew'] = 'required|string|max:255';
         }else{
             $rules['email'] = [
@@ -44,5 +45,37 @@ class Helper
         }
 
         return $rules;
+    }
+
+
+    public static function generateRefCode($name){
+        $randNo = rand(100, 99999);
+        $digits = str_split($randNo);
+
+        $names = explode(' ', $name);
+        $codeArray = [];
+
+        foreach ($names as $name){
+            array_push($codeArray, self::getLast($name));
+        }
+
+        $codeArray = array_merge($codeArray, $digits);
+
+        shuffle($codeArray);
+        $code = implode('', $codeArray);
+
+        $user = User::where('ref_code', $code)->first();
+
+        if(!is_null($user)){
+            $code = self::generateRefCode($name);
+        }
+
+        return $code;
+    }
+
+    private static function getLast($word){
+        if(empty($word))
+            return '';
+        return strtolower($word[strlen($word) - 1]);
     }
 }

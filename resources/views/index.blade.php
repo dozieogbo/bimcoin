@@ -28,23 +28,31 @@
                                     </div>
                                 @endif
                                 <h1 class="h2 __title">BimCoin: Biggest Interwealth Movement Coin</h1>
+                                    <div class="text-center">
+                                        <img style="margin: auto" src="{{asset('img/roundlogo.png')}}" alt="Bimcoin Logo" align="middle" width="100" height="100" class="img-responsive">
+                                    </div>
+
                                 <p>
-                                    Join our new world of wealth, donate $1 for 100,000BIM
+                                    Join our new world of wealth, donate $1 for 1,000BIM
                                 </p>
                                 <p>
-                                    <a class="custom-btn custom-btn--medium custom-btn--style-4" style="margin-top: 20px;" href="{{route('donate')}}">Donate now!!</a>
+                                    <a class="custom-btn custom-btn--medium custom-btn--style-4" style="margin-top: 20px;" href="{{route('donate')}}">Register Now!!</a>
                                 </p>
 
                                 <div class="social-btns">
                                     <a class="fontello-twitter" target="_blank" href="https://twitter.com/BimCoinTweets"></a>
                                     <a class="fontello-facebook" target="_blank" href="https://web.facebook.com/BiggestInterwealthMovementCoin?_rdc=1&_rdr"></a>
-                                    <a class="fontello-paper-plane" target="_blank" href="https://t.me/bimcoin"></a>
-                                    <a class="fontello-youtube-play" target="_blank" href="http://youtube.me/BimCoin"></a>
+                                    <a class="fontello-paper-plane" target="_blank" href="https://t.me/joinchat/HWY4K00Mh6iZo3ChT9o68Q"></a>
+                                    <a class="fontello-youtube-play" target="_blank" href="https://www.youtube.com/channel/UCEAcO2ho_P7b5oq6obtQP3A"></a>
+                                    <a target="_blank" href="https://api.whatsapp.com/send?phone=2349033005188"><i class="fab fa-whatsapp"></i></a>
+                                    
+                                    
+                                    
                                 </div>
 
-                                <p class="text--left">Donation starts in</p>
+                                <p class="text--left">Donation ends in</p>
 
-                                <div class='countdown js-countdown' data-date="2018-06-1"></div>
+                                <div class='countdown js-countdown' data-date="2018-11-30"></div>
                             </div>
                         </div>
                     </div>
@@ -86,7 +94,32 @@
                         </p>
                     </div>
                 </div>
+
+
+                <div class="video-container" data-aos="fade-up">
+						<img class="img-responsive center-block lazy" src="img/blank.gif" data-src="img/video_bg.png" alt="demo" />
+
+						<div class="__video" style="max-width: 300px;">
+							<div class="__wrp">
+								<div class="embed-responsive">
+									<div class="__bg embed-responsive-item">
+										<div class="__btn_wrp">
+											<a class="__play-btn  circled" data-fancybox href="https://www.youtube.com/watch?v=213yLGelLks"></a>
+
+											<span class="__desc" style="color: #333">Presentation Video</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+
             </div>
+
+
         </section>
 
         <section class="section section--no-pt">
@@ -212,24 +245,13 @@
                 <div class="documents documents--style-2">
                     <div class="__inner">
                         <h3>
-                            Donation Instructions
+                            Ethereum Market
                         </h3>
                         <div class="row">
                             <!-- start item -->
-                            <div class="col col--xs-12 col--sm-12">
-                                <h6>
-                                    Conversion Rate: 100,000BIM for $1 donation
-                                </h6>
-                                <p>
-                                    Send Donation to <br>
-                                    <strong>
-                                        0x9e7ce36dbd1a9a6c6e80d08e38077745855edd3a
-                                    </strong>
-                                </p>
-                                <small>
-                                    The Bimcoin will be sent to the adress used for the donation. Please do not send from an exchange, send from an ether address you have the private key to.
-                                </small>
-                                <small> <br> Read on how to make donations here <a href="{{route('how.to')}}">Here</a> </small>
+                            <div class="col col--xs-3"></div>
+                            <div class="col col--xs-6 col--sm-6">
+                               <script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script><div class="coinmarketcap-currency-widget" data-currencyid="1027" data-base="NGN" data-secondary="USD" data-ticker="true" data-rank="true" data-marketcap="true" data-volume="true" data-stats="USD" data-statsticker="true"></div>
                             </div>
                             <!-- end item -->
                         </div>
@@ -306,7 +328,9 @@
                         80% ICO (freely given on donation) <br> 15% team <br> 5% Operation cost <br>
 
                         <p>
-                            <a class="custom-btn custom-btn--medium custom-btn--style-2" href="#">See White paper</a>
+                            <a class="custom-btn custom-btn--medium custom-btn--style-2" href="{{asset('bimCoin_whitePaper.pdf')}}/" target="_blank">See White paper</a>
+                            
+                            
                         </p>
                     </div>
 
@@ -315,6 +339,12 @@
                     <div class="col col--md-6 col--lg-offset-1">
                         <div style="width:100%">
                             <canvas id="canvas_00002" width="100%" height="90%"></canvas>
+                            
+                            <p>
+                                The above distribution strategy will allow us to innovate and maintain the platform to achieve maximum efficiency
+                                <br>
+                                1,000 BIM can be gotten by donating $1 to the project.
+                            </p>
 
                             <script type="text/javascript">
                                 (function() {
@@ -393,7 +423,70 @@
             </div>
         </section>
         <!-- end section -->
+        <section class="section section--blue-bg">
+            <div class="grid grid--container">
+                {{--<div class="section-heading section-heading--center section-heading--white  col-MB-60">--}}
+                    {{--<h5 class="__subtitle">Benefits</h5>--}}
 
+                    {{--<h2 class="__title">Facts in digits</h2>--}}
+                {{--</div>--}}
+                <div class="row">
+
+                    <div class="col col--md-4">
+                        <div class="card">
+                            <p><strong>Take Advantage Of a LifeTime Opportunity!</strong> Visit this Link: <a href="https://bimcoin.cc/ref/l98a5s3">https://bimcoin.cc/ref/l98a5s3</a> </p>
+                            <p>Claim at least <strong>FREE 100,000BimCoin</strong> Tokens with just 1USD Donation in Ethereum for your instant and automatic crediting to your <a href="https://myetherwallet.com">MyEtherWallet.com</a>  account.</p>
+                            <p> <strong>NOTE</strong><br>
+                                This 100,000BimCoin will make you a millionaire when <strong>1BimCoin</strong> is been sold at <strong>0.03USD</strong> in <strong>12months</strong> time after the free distribution is over.</p>
+                        </div>
+                    </div>
+
+                    <div class="col col--md-4">
+                        <div class="card">
+                            <p><strong>Take Advantage Of a LifeTime Opportunity!</strong> Visit this Link: <a href="https://bimcoin.cc/ref/l98a5s3">https://bimcoin.cc/ref/l98a5s3</a> </p>
+                            <p>Claim at least <strong>FREE 10,000,000BimCoin</strong> Tokens with just 100USD Donation in Ethereum for your instant and automatic crediting to your <a href="https://myetherwallet.com">MyEtherWallet.com</a>  account.</p>
+                            <p> <strong>NOTE</strong><br>
+                                This 10,000,000BimCoin will make you a millionaire when <strong>1BimCoin</strong> is been sold at <strong>0.0003USD</strong> in <strong>6months</strong> time after the free distribution is over.</p>
+                        </div>
+                    </div>
+
+                    <div class="col col--md-4">
+                        <div class="card">
+                            <p><strong>Take Advantage Of a LifeTime Opportunity!</strong> Visit this Link: <a href="https://bimcoin.cc/ref/l98a5s3">https://bimcoin.cc/ref/l98a5s3</a> </p>
+                            <p>Claim at least <strong>FREE 100,000,000BimCoin</strong> Tokens with just 1000USD Donation in Ethereum for your instant and automatic crediting to your <a href="https://myetherwallet.com">MyEtherWallet.com</a>  account.</p>
+                            <p> <strong>NOTE</strong><br>
+                                This 100,000,000BimCoin will make you a millionaire when <strong>1BimCoin</strong> is been sold at <strong>0.00005USD</strong> in <strong>3months</strong> time after the free distribution is over.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col col--md-2">
+                    </div>
+
+                    <div class="col col--md-4">
+                        <div class="card">
+                            <p><strong>Take Advantage Of a LifeTime Opportunity!</strong> Visit this Link: <a href="https://bimcoin.cc/ref/l98a5s3">https://bimcoin.cc/ref/l98a5s3</a> </p>
+                            <p>Claim at least <strong>FREE 1,000,000BimCoin</strong> Tokens with just 10USD Donation in Ethereum for your instant and automatic crediting to your <a href="https://myetherwallet.com">MyEtherWallet.com</a>  account.</p>
+                            <p> <strong>NOTE</strong><br>
+                                This 1,000,000BimCoin will make you a millionaire when <strong>1BimCoin</strong> is being sold at <strong>0.003USD</strong> in <strong>9months</strong> time after the free distribution is over.</p>
+                        </div>
+                    </div>
+
+                    <div class="col col--md-4">
+                        <div class="card">
+                            <p><strong>Take Advantage Of a LifeTime Opportunity!</strong> Visit this Link: <a href="https://bimcoin.cc/ref/l98a5s3">https://bimcoin.cc/ref/l98a5s3</a> </p>
+                            <p>Claim at least <strong>FREE 1,000,000,000BimCoin</strong> Tokens with just 100-0USD Donation in Ethereum for your instant and automatic crediting to your <a href="https://myetherwallet.com">MyEtherWallet.com</a>  account.</p>
+                            <p> <strong>NOTE</strong><br>
+                                This 1,000,000,000BimCoin will make you more millions when <strong>1BimCoin</strong> is being sold at <strong>0.00002USD</strong> in <strong>1month</strong> time after the free distribution is over.</p>
+                        </div>
+                    </div>
+
+                    <div class="col col--md-2">
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- start section -->
         <section class="section">
             <div class="grid grid--container">
@@ -487,6 +580,8 @@
 
                                 <p>
                                     We are constantly taking note of the best option for the project and will release a more stable code in he last Quarter of the year
+                                    <br>
+                                    And we would have build and launch BimCoinXchange.cc where you can exchange Fiat Currencies To BimCoin and other Crypto Currencies and vise versa just like Remitano.com And BimCoin will be listed on some other external exchange also where you can trade BimCoin
                                 </p>
                             </div>
                             <!-- end item -->
@@ -500,6 +595,8 @@
 
                                 <p>
                                     We will continue to support Bimcoin and find better ways to iterate the core to be faster, more secured and safer.
+                                    <br>
+                                    And we would build and launch more additional exchanges to make more easier and convenient BimCoin conversion.
                                 </p>
                             </div>
                             <!-- end item -->
@@ -591,14 +688,6 @@
         </section>
         <!-- end section -->
 
-
-
-
-        <!-- start section -->
-
-        <!-- end section -->
-
-        <!-- start section -->
         <section class="section">
             <div class="grid grid--container">
                 <div class="section-heading section-heading--center  col-MB-60">
@@ -646,8 +735,11 @@
                                     <td>100,000,000,000,000 BIM</td>
                                 </tr>
                             </table>
-
-                            <a class="custom-btn custom-btn--medium custom-btn--style-1" href="#donation">Donate now !</a>
+                            @auth
+                            <a class="custom-btn custom-btn--medium custom-btn--style-1" href="{{route('donate')}}">Donate now !</a>
+                            @else
+                            <a class="custom-btn custom-btn--medium custom-btn--style-1" href="https://bimcoin.cc/ref/l98a5s3">Donate now !</a>
+                                @endauth
                         </div>
                     </div>
 
@@ -757,7 +849,7 @@
                                     <article>
                                         <div class="__inner">
                                             <p>
-                                                Free donations only, for a donation of at least 1USD to 100,000BimCoin to support the growth and sustainability of the token.
+                                                Free donations only, for a donation of at least 1USD to 1,000BimCoin to support the growth and sustainability of the token.
                                             </p>
 
 
@@ -935,87 +1027,14 @@
                                         <div class="__inner">
 
                                             <p>
-                                                Yes! Every 1USD BimCoin attracts 100,000 free BimCoins. And you can donate more than 1USD at once and get more than 100,000BimCoins at once.
+                                                Yes! Every 1USD BimCoin attracts 1,000 free BimCoins. And you can donate more than 1USD at once and get more than 1,000BimCoins at once.
                                             </p>
                                         </div>
                                     </article>
                                 </div>
-
-
                             </div>
-
-
                         </div>
                         <!-- end FAQ -->
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end section -->
-
-        <section class="section">
-            <div class="grid grid--container">
-                <div class="section-heading section-heading--center  col-MB-60">
-                    <h2 class="__title">Advisors</h2>
-                </div>
-
-                <!-- start team -->
-                <div class="team team--style-1">
-                    <div class="__inner">
-                        <div class="row">
-                            <!-- start item -->
-                            <div class="col col--sm-6 col--lg-4">
-                                <div class="__item text--center aos-init aos-animate" data-aos="zoom-in" data-aos-delay="100">
-                                    <figure class="__image  center-block circled">
-                                        <img class="img-responsive circled lazy loaded" src="{{asset('img/loyce.jpg')}}" width="230" height="230" alt="demo" data-was-processed="true">
-
-
-                                    </figure>
-
-                                    <div class="__content">
-                                        <h5 class="__title">Loyce Akins</h5>
-
-                                        <p>
-                                            Founder and CEO OMLA, 360ictNETWORK.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end item -->
-
-                            <!-- start item -->
-                            <div class="col col--sm-6 col--lg-4">
-                                <div class="__item text--center aos-init aos-animate" data-aos="zoom-in" data-aos-delay="200">
-                                    <figure class="__image  center-block circled">
-                                        <img class="img-responsive circled lazy loaded" src="{{asset('img/glorious.jpg')}}" width="230" height="230" alt="demo" data-was-processed="true">
-                                    </figure>
-
-                                    <div class="__content">
-                                        <h5 class="__title">Glorious Emmanuel Omolola</h5>
-                                        <p>
-                                            Co-Founder, BIM-HOPFAN Global Resources LTD.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end item -->
-
-                            <!-- start item -->
-                            <div class="col col--sm-6 col--lg-4">
-                                <div class="__item text--center aos-init aos-animate" data-aos="zoom-in" data-aos-delay="300">
-                                    <figure class="__image  center-block circled">
-                                        <img class="img-responsive circled lazy loaded" src="{{asset('img/tosin.jpg')}}" width="230" height="230" alt="demo" data-was-processed="true">
-                                    </figure>
-
-                                    <div class="__content">
-                                        <h5 class="__title">Opeyemi Tosin Akinluyi</h5>
-                                        <p>
-                                            Founder and CEO OpyKin Solutions. Head Of ICT, Ondo State University Of Science And Technology.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -1107,4 +1126,15 @@
             </div>
         </section>
     </main>
+    <style>
+        .card{
+            padding: 10px;
+            color: black;
+            margin-bottom: 20px;
+        }
+        
+        .card strong{
+            color: #20345f;
+        }
+    </style>
 @endsection

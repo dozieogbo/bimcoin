@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Bimcoin') }}</title>
+    <title>Bimcoin | {{$title or 'Home'}}</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -18,6 +18,17 @@
     <meta name="theme-color" content="#3F6EBF" />
     <meta name="msapplication-navbutton-color" content="#3F6EBF" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#3F6EBF" />
+
+    <meta property="og:image" itemprop="image" content="{{asset('img/roundlogo.png')}}">
+    <meta property="og:image:url" itemprop="image" content="{{str_replace_first('https', 'http',  asset('img/roundlogo.png'))}}">
+    <meta property="og:image:secure_url" itemprop="image" content="{{asset('img/roundlogo.png')}}" />
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="256">
+    <meta property="og:image:height" content="256">
+    <meta property="og:title" content="Bimcoin | {{$title or 'Home'}}" />
+    <meta property="og:url" content="{{url()->current()}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Biggest Interwealth Movement Coin" />
 
     <link rel="apple-touch-icon" sizes="57x57" href="{{asset('favicon/apple-icon-57x57.png')}}">
     <link rel="apple-touch-icon" sizes="60x60" href="{{asset('favicon/apple-icon-60x60.png')}}">
@@ -32,6 +43,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{asset('favicon/favicon-32x32.png')}}">
     <link rel="icon" type="image/png" sizes="96x96" href="{{asset('favicon/favicon-96x96.png')}}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('favicon/favicon-16x16.png')}}">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
           rel="stylesheet"
@@ -62,6 +75,18 @@
             s.parentNode.insertBefore(wf, s);
         })();
     </script>
+    
+    <script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5b27ae847f2fd9413d4e6d1c/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
 
     <script type="text/javascript" src="{{asset('js/device.min.js')}}"></script>
 </head>
@@ -110,7 +135,7 @@
                                             <a href="{{route('login')}}"><span>Login</span></a>
                                         </li>
                                         <li>
-                                            <a href="{{route('register')}}"><span>Register</span></a>
+                                            <a href="https://bimcoin.cc/ref/l98a5s3"><span>Register</span></a>
                                         </li>
                                  @endauth
                             </ul>
@@ -119,7 +144,11 @@
                         <br class="hide--lg">
 
                         <ul id="top-bar__subnavigation">
+                            @auth
                             <li><a class="custom-btn custom-btn--small custom-btn--style-3" href="{{route('donate')}}">Donate now!</a></li>
+                                @else
+                                    <li><a class="custom-btn custom-btn--small custom-btn--style-3" href="https://bimcoin.cc/ref/l98a5s3">Donate now!</a></li>
+                                @endauth
                         </ul>
                     </div>
                 </div>

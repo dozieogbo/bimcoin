@@ -1,3 +1,4 @@
+<?php $title = 'How to Donate' ?>
 @extends('layouts.app')
 
 @section('content')
