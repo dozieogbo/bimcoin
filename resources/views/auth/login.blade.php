@@ -1,3 +1,4 @@
+<?php $title = 'Login' ?>
 @extends('layouts.auth')
 
 @section('content')
@@ -39,7 +40,7 @@
                             <button class="custom-btn custom-btn--medium custom-btn--style-4 wide" type="submit" role="button">Login</button>
                         </p>
 
-                        <p class="text--center"><a href="{{route('register')}}">Sign Up</a> if you don’t have an account</p>
+                        <p class="text--center"><a href="https://bimcoin.cc/ref/l98a5s3">Sign Up</a> if you don’t have an account</p>
                     </form>
                 </div>
             </div>

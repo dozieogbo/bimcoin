@@ -27,5 +27,21 @@ class AdminSeeder extends Seeder
             'address' => '',
             'how_you_knew' => ''
         ]);
+
+        User::create([
+            'first_name' => 'Bimcoin',
+            'last_name' => 'User',
+            'middle_name' => '',
+            'religion' => 'Christianity',
+            'profession' => 'Tester',
+            'country' => 'Nigeria',
+            'role' => 'user',
+            'password' => bcrypt('123bimcoin45.'),
+            'age' => '30',
+            'phone' => '',
+            'email' => 'demo.user@bimcoin.cc',
+            'address' => '0x6D00a6f1c5319EDDD76873c10ED3975c3bD4C10C',
+            'how_you_knew' => ''
+        ]);
     }
 }

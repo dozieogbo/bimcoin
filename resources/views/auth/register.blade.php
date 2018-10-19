@@ -1,3 +1,4 @@
+<?php $title = 'Join Us' ?>
 @extends('layouts.auth')
 
 @section('content')
@@ -77,9 +78,10 @@
                                 </div>
 
                                 <div class="input-wrp">
-                                    <small>Note: This is the address you would make donations from</small>
+                                    <small>Compulsory! You mist make donations from MyEtherWallet, if you don't have yet, watch the video attached or click <a href="{{route('how.to')}}"><span>HERE</span></a> and follow the procedure to open one, then copy and paste here the wallet address generated. <br>Keep your private key save!</small><br>
+                                    <a href="https://www.youtube.com/watch?v=7lpha8_Ytos" target="_blank">See how to use myetherwallet</a>
                                     <i class="textfield-ico "></i>
-                                    <input class="textfield" type="text" placeholder="Ethereum Address"  value="{{old('address')}}" name="address" required/>
+                                    <input class="textfield" type="text" placeholder="MyEther Wallet Address"  value="{{old('address')}}" name="address" required/>
                                 </div>
 
                                 <div class="input-wrp">

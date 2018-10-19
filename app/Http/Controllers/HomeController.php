@@ -63,7 +63,8 @@ class HomeController extends Controller
     }
 
     public function donate(){
-        return view('donate');
+        $user = Auth::user();
+        return view('donate')->with($user->toArray());
     }
 
     public function howTo(){

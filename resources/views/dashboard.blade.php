@@ -1,7 +1,9 @@
+<?php $title = 'Dashboard' ?>
 @extends('layouts.app')
 
 @section('content')
-    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -17,46 +19,58 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="email">Email address</label>
-                                    <input type="email" class="form-control" placeholder="Enter email" name="email" id="email" value="{{old('email', $email)}}" required>
+                                    <input type="email" class="form-control" placeholder="Enter email" name="email"
+                                           id="email" value="{{old('email', $email)}}" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="first_name">First Name</label>
-                                    <input type="text" class="form-control" placeholder="Enter first name" name="first_name" id="first_name" value="{{old('first_name', $first_name)}}" required>
+                                    <input type="text" class="form-control" placeholder="Enter first name"
+                                           name="first_name" id="first_name" value="{{old('first_name', $first_name)}}"
+                                           required>
                                 </div>
                                 <div class="form-group">
                                     <label for="last_name">Last Name</label>
-                                    <input type="text" class="form-control" placeholder="Enter last name" name="last_name" id="last_name" value="{{old('last_name', $last_name)}}" required>
+                                    <input type="text" class="form-control" placeholder="Enter last name"
+                                           name="last_name" id="last_name" value="{{old('last_name', $last_name)}}"
+                                           required>
                                 </div>
                                 <div class="form-group">
                                     <label for="middle_name">Middle Name</label>
-                                    <input type="text" class="form-control" placeholder="Enter middle name" name="middle_name" id="middle_name"
+                                    <input type="text" class="form-control" placeholder="Enter middle name"
+                                           name="middle_name" id="middle_name"
                                            value="{{old('middle_name', $middle_name)}}" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="age">Age</label>
-                                    <input type="number" class="form-control" name="age" id="first_name" value="{{old('age', $age)}}" required>
+                                    <input type="number" class="form-control" name="age" id="first_name"
+                                           value="{{old('age', $age)}}" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="phone">Phone No</label>
-                                    <input type="tel" class="form-control" name="phone" id="phone" value="{{old('phone', $phone)}}" required>
+                                    <input type="tel" class="form-control" name="phone" id="phone"
+                                           value="{{old('phone', $phone)}}" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="profession">Profession</label>
-                                    <input type="text" class="form-control" name="profession" id="profession" value="{{old('profession', $profession)}}" required>
+                                    <input type="text" class="form-control" name="profession" id="profession"
+                                           value="{{old('profession', $profession)}}" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="religion">Religion</label>
-                                    <input type="text" class="form-control" placeholder="Enter religion" name="religion" id="religion" value="{{old('religion', $religion)}}" required>
+                                    <input type="text" class="form-control" placeholder="Enter religion" name="religion"
+                                           id="religion" value="{{old('religion', $religion)}}" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="country">Country</label>
-                                    <input type="text" class="form-control" name="country" id="country" value="{{old('country', $country)}}" required>
+                                    <input type="text" class="form-control" name="country" id="country"
+                                           value="{{old('country', $country)}}" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="address">Address</label>
-                                    <input type="text" class="form-control" placeholder="0x000000...0" name="address" id="address" value="{{old('address', $address)}}" required>
+                                    <input type="text" class="form-control" placeholder="0x000000...0" name="address"
+                                           id="address" value="{{old('address', $address)}}" required>
                                 </div>
                             </div>
                         </div>
@@ -64,7 +78,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" onclick="$('#editForm').submit()">Save changes</button>
+                    <button type="button" class="btn btn-primary" onclick="$('#editForm').submit()">Save changes
+                    </button>
                 </div>
             </div>
         </div>
@@ -124,7 +139,8 @@
                             <p class="card-text">
                                 <span class=" text-success">Send out and send in Your BimCoin From MyEther Wallet </span>
                                 <br>
-                                <a class="custom-btn custom-btn--small custom-btn--style-3" target="_blank" href="https://www.myetherwallet.com">myetherwallet</a></li>
+                                <a class="custom-btn custom-btn--small custom-btn--style-3" target="_blank"
+                                   href="https://www.myetherwallet.com">myetherwallet</a></li>
                             </p>
                         </div>
                     </div>
@@ -133,31 +149,46 @@
             <br>
             <div class="row">
                 <div class="col-sm-4">
-                <div class="card">
+                    <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Referral details </h5>
                             <p class="card-text">
-                            <ul>
-                                <li>
-                                    <strong class="text-black">
-                                        Number of Referrals
-                                    </strong>
-                                    <span class=" text-black">
+                                <ul>
+                                    <li>
+                                        <strong class="text-black">
+                                            Number of Referrals
+                                        </strong>
+                                        <span class=" text-black">
                                 {{$ref_count}}
                             </span>
-                                </li>
-                                <li>
-                                    <strong class="text-black">
-                                        Referral Link
-                                    </strong>
-                                    <span class="text-small text-black">
+                                    </li>
+                                    <li>
+                                        <strong class="text-black">
+                                            Referral Link
+                                        </strong>
+                                        <span class="text-small text-black">
                                 <a href="https://bimcoin.cc/ref/{{$ref_code}}">https://bimcoin.cc/ref/{{$ref_code}}</a> <br>
-                                <small>Get 1,000BIM for each referred person that donated</small>
+                                <small>Get 1,000BIM for each referred person that donated</small> <br>
+
+                            {{--<p>--}}
+                                            {{--SPECIAL OFFER! ENDS JULY 7! <br>--}}
+
+                                            {{--Make special use of your refferrer link! <br><br>--}}
+
+                                            {{--<strong>EARN 12,500USD instantly when your number of refferred persons that has donated--}}
+                                            {{--HITS 12,500 PERSONS on your dashboard.</strong><br><br>--}}
+
+                                            {{--HOW: Once they are completed, screen grab your dashboard and send as email to--}}
+                                            {{--supportcenter@bimcoin.cc <br><br>--}}
+
+                                            {{--Once your details are verified and confirmed by an admin, you will be credited with--}}
+                                            {{--12,500USD in NIG, ETH or BTC immediately.--}}
+                                            {{--</p>--}}
                             </span>
-                                </li>
-                                
+                            </li>
+
                             </ul>
-                            
+
                             </p>
                         </div>
                     </div>
@@ -224,7 +255,9 @@
                             </span>
                                 </li>
                             </ul>
-                            <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#editModal">Edit</button>
+                            <button type="button" class="btn btn-success btn-lg" data-toggle="modal"
+                                    data-target="#editModal">Edit
+                            </button>
                             </p>
                         </div>
                     </div>
