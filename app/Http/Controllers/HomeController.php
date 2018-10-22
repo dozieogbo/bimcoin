@@ -69,7 +69,7 @@ class HomeController extends Controller
     }
 
     public function verify_payment($amount, $ref) {
-        $currency = "NGN"; //Correct Currency from Server
+        $currency = "USD"; //Correct Currency from Server
 
         $query = array(
             "SECKEY" => 'FLWSECK-ad86a81be2f196a44ca79c2b7b106ae5-X',

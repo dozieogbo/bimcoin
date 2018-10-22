@@ -129,7 +129,7 @@
                 amount: amount,
                 customer_phone: phone,
                 customer_firstname: full_name,
-                currency: "NGN",
+                currency: "USD",
                 payment_method: "both",
                 txref: ref,
                 meta: [{
@@ -150,7 +150,6 @@
                     }
                     x.close(); // use this to close the modal immediately after payment.
                     
-                    //   this.verifyAccount(txref, selectedFeeIds);
                 }
                 });
                 
