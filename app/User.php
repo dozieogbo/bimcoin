@@ -57,6 +57,10 @@ class User extends Authenticatable
         return $this->hasMany('App\User', 'referrer_id');
     }
 
+    public function donations() {
+        return $this->hasMany(Donation::class, 'user_id');
+    }
+
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new PasswordResetNotification($token, $this->first_name));

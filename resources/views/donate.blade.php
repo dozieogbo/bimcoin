@@ -5,16 +5,17 @@
     <div id="intro" style="background-image: url({{asset('img/intro_img/1.jpg')}});">
         <div class="grid grid--container text-success">
 
-
+            
             <div class="row">
                 <div class="col--sm-offset-2 col-sm-8 text--center">
                     <div class="card">
                         <div class="card-body">
+                            @include('inc.flash')
+                            @include('inc.errors')
+
                             <h5 class="card-title ">Donation instructions</h5>
                             <p class="card-text">
-
                                 <small>Rate: $1 to 1,000 BIM</small>
-
                             <div class="col-md-12">
                                 <span class="form-control-md text-black">Expected BIMCOIN : <span
                                             id="expected_amount">0</span></span>
@@ -64,6 +65,10 @@
                                     above after specifying how many USD in the input above. This helps you pay with any cryptocurrency of your choice and when payment is confirmed,
                                     we credit your wallet with the expected number of BIM Coins.</p>
                             </div>
+                            <h3 class="text-center"><b>OR</b></h3>
+                            <div>
+                                <button class="btn btn-primary btn-lg" id="pay_with_rave">Pay with Rave</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -71,9 +76,12 @@
             </div>
         </div>
     </div>
+
+<?php $ref = floor((mt_rand(1,10000000000000)) + 1); ?>
 @endsection
 
 @section('scripts')
+    <script src="http://flw-pms-dev.eu-west-1.elasticbeanstalk.com/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
     <script>
         $('#donate_amount').on('input', function (e) {
             var value = Number(e.target.value);
@@ -86,8 +94,69 @@
                 $('#actual_amount').val(amount);
                 $('#coinPayments').submit();
             }else{
-                alert('Please, specify an amount in USD (minimum of 1USD) you want to donate in the input above');
+                alert('Please, specify an amount in USD (minimum of 1 USD) you want to donate in the input above');
             }
         });
+        
+        $(document).ready(function() {
+            $('#pay_with_rave').click(function (e) {
+                e.preventDefault();
+                let amount = $('#donate_amount').val();
+                if(amount === ''){
+                    let ele = document.getElementById('donate_amount');
+                    ele.focus();
+                    alert('Amount cannot be empty');
+                } else {
+                    $(this).html('<span class="fa fa-spinner fa-spin"></span> Loading').attr('disabled', 'disabled');
+                    payWithRave();
+                }
+                
+            })
+
+            function payWithRave() {
+                $('#modal_notify').modal('hide');
+                let amount = $('#donate_amount').val();
+                let full_name = '{{ Auth::user()->first_name.' '.Auth::user()->last_name}}';
+                let email = '{{ Auth::user()->email }}';
+                let phone = '{{ Auth::user()->phone }}';
+                let ref = '{{$ref}}';
+                let url1 = "{{ route('verify_payment', ['%amount%',$ref]) }}";
+                let url = url1.replace('%amount%', amount);
+                    
+                var x = getpaidSetup({
+                PBFPubKey: 'FLWPUBK-a704878c2626721fb4a20dd27a41f07f-X',
+                customer_email: email,
+                amount: amount,
+                customer_phone: phone,
+                customer_firstname: full_name,
+                currency: "NGN",
+                payment_method: "both",
+                txref: ref,
+                meta: [{
+                    metaname: "flightID",
+                    metavalue: "AP1234"
+                }],
+                onclose: function() {
+                    $('#pay_with_rave').html('Pay with Rave').attr('disabled', false);
+                },
+                callback: function(response) {
+                    var txref = response.tx.txRef; // collect txRef returned and pass to a server page to complete status check.
+                    console.log("This is the response returned after a charge", response);
+                    if (response.tx.chargeResponseCode == "00" || response.tx.chargeResponseCode == "0") {
+                        // redirect to a success page
+                        location.href = url;
+                    } else {
+                        // redirect to a failure page.
+                    }
+                    x.close(); // use this to close the modal immediately after payment.
+                    
+                    //   this.verifyAccount(txref, selectedFeeIds);
+                }
+                });
+                
+            }
+
+        })
+        
     </script>
 @endsection

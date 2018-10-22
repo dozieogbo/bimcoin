@@ -20,6 +20,8 @@ Route::get('/ref/{code}', 'Auth\RegisterController@showRegistrationForm')->name(
 Route::get('/dashboard', 'HomeController@dashboard')->name('dashboard');
 Route::get('/how_to', 'HomeController@howTo')->name('how.to');
 Route::get('/donate', 'HomeController@donate')->name('donate');
+Route::get('/donate/{amount}/{ref}', 'HomeController@verify_payment')->name('verify_payment');
+
 Route::get('/terms', 'HomeController@terms')->name('terms');
 Route::get('/verify', 'HomeController@verify')->name('verify');
 Route::post('/profile', 'HomeController@profile')->name('profile');
